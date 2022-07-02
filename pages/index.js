@@ -1,34 +1,41 @@
 import React from "react";
-import HeadComponent from '../components/Head';
+import HeadComponent from "../components/Head";
 
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "aguadulcehq";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-  
-  
   return (
     <div className="App">
-      <HeadComponent/>
+      <HeadComponent />
       <div className="container">
         <header className="header-container">
-          <p className="header"> 😳 Buildspace Emoji Store 😈</p>
-          <p className="sub-text">The only emoji store that accepts sh*tcoins</p>
+          <p className="header">0xShop</p>
+          <p className="sub-text">
+            Crypto T-shirts and gadgets for the next generation
+          </p>
         </header>
 
         <main>
-          <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+          <img
+            src="https://media4.giphy.com/media/Vi4MRwWi9sYpi/giphy.gif?cid=ecf05e47wqc3kpewoeijtd6hoi9zq38c3wjb78eagmi8h87u&rid=giphy.gif"
+            alt="emoji"
+          />
         </main>
 
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
+          <img
+            alt="Twitter Logo"
+            className="twitter-logo"
+            src="twitter-logo.svg"
+          />
           <a
             className="footer-text"
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
+          >{`built by @${TWITTER_HANDLE} with ❤️`}</a>
         </div>
       </div>
     </div>
