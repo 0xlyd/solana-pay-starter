@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PublicKey } from "@solana/web3.js";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import HeadComponent from "../components/Head";
+import Product from "../components/Product";
 
 // Constants
 const TWITTER_HANDLE = "aguadulcehq";
@@ -11,6 +12,18 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const App = () => {
   // This will fetch the users' public key (wallet address) from any wallet we support
   const { publicKey } = useWallet();
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    if (publicKey) {
+      fetch(`/api/fetchProducts`)
+        .then((res) => res.json())
+        .then((data) => {
+          setProducts(data);
+          console.log("Products", data);
+        });
+    }
+  }, [publicKey]);
 
   const renderNotConnectedContainer = () => (
     <div>
@@ -19,6 +32,15 @@ const App = () => {
       </div>
     </div>
   );
+
+  const renderItemBuyContainer = () => (
+    <div className="products-container">
+      {products.map((product) => (
+        <Product key={product.id} product={product} />
+      ))}
+    </div>
+  );
+
   return (
     <div className="App">
       <HeadComponent />
@@ -37,7 +59,7 @@ const App = () => {
           />
 
           {/* We only render the connect button if public key doesn't exist */}
-          {publicKey ? "Connected!" : renderNotConnectedContainer()}
+          {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
         <div className="footer-container">
