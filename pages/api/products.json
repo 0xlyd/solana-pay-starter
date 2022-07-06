@@ -2,10 +2,28 @@
   {
     "id": 1,
     "name": "Crypto ATH vs Discount",
-    "price": "0.09",
+    "price": "0.01",
     "description": "Memento t-shirt to make sure you remember what to do when crypto is under discount",
     "image_url": "https://gateway.pinata.cloud/ipfs/QmRSDrTv21XnoQUmHPduK9ip86Jn6CANLLUhkZLdDvAkiM",
     "filename": "store-tee-discount",
     "hash": "QmRSDrTv21XnoQUmHPduK9ip86Jn6CANLLUhkZLdDvAkiM"
+  },
+  {
+    "id": 2,
+    "name": "Crypto ATH 2nd gen",
+    "price": "0.01",
+    "description": "To test if this is dynamic enough",
+    "image_url": "https://gateway.pinata.cloud/ipfs/QmRSDrTv21XnoQUmHPduK9ip86Jn6CANLLUhkZLdDvAkiM",
+    "filename": "store-tee-discount",
+    "hash": "QmRSDrTv21XnoQUmHPduK9ip86Jn6CANLLUhkZLdDvAkiM"
+  },
+  {
+    "id": 3,
+    "name": "Not sure",
+    "price": "0.001",
+    "image_url": "https://i.imgur.com/3wmxMEn.jpeg",
+    "description": "I am not sure",
+    "filename": "hashbot.zip",
+    "hash": "QmWjcX81EivancHaU5XjUvLofKnywobmFce4RUSVrxmbvD"
   }
 ]
